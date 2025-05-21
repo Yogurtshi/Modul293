@@ -1,9 +1,9 @@
 body{
-    background-image: url("img/background.jpg");
+    background-image: url(img/background.jpg);
 }
 
 main{
     display: flex;
     justify-content: center;
-
+    margin-top: 4 rem;
 }
