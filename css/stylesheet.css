@@ -7,14 +7,19 @@
   font-style: normal;
 }
 
-body{
-    background-image: url(img/background.jpg);
-    font: "Playwrite HU", cursive;
+body {
+  background-image: url(/img/background.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+  font: "Playwrite HU", cursive;
 }
 
 
-main{
-    display: flex;
-    justify-content: center;
-    margin-top: 4rem;
+main {
+  display: flex;
+  justify-content: center;
+  margin-top: 22rem;
+  font-size: xx-large;
+  background-color: white;
 }
