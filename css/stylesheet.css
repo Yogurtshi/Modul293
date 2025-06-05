@@ -1,24 +1,94 @@
-@import url('https://fonts.googleapis.com/css2?family=Playwrite+HU:wght@100..400&display=swap');
+/* MAIN */
 
-.playwrite-hu-fonty {
-  font-family: "Playwrite HU", cursive;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
+
+html {
+  scroll-behavior: smooth;
+  scroll-margin: 60px;
+  font-size: 1.2rem;
+  height: 200vh;
 }
 
 body {
-  background-image: url(../img/background.jpg);
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  font: "Playwrite HU", cursive;
+  margin: 0;
+  padding: 0;
 }
 
+/* GRID TEMPLATE */
+
+.container1 {
+  display: grid;
+
+  grid-template-areas:
+    "header header header"
+    "side1 main side2"
+    "footer footer footer";
+
+  grid-template-columns: 10rem 1fr 10rem;
+  grid-template-rows: auto 1fr auto;
+  grid-gap: 10px;
+  min-height: 200vh;
+  margin: 0;
+  margin-top: 3rem;
+}
+
+header {
+  grid-area: header;
+}
 
 main {
-  display: flex;
-  justify-content: center;
-  margin-top: 22rem;
-  font-size: x-large;
-  background-color: white;
+  grid-area: main;
+  padding: 2rem;
+  flex-direction: column;
+  background-color: gainsboro;
+}
+
+.side1 {
+  grid-area: side1;
+  padding: 2rem;
+  background-color: lightgreen;
+}
+
+.side2 {
+  grid-area: side2;
+  padding: 2rem;
+  background-color: lightcoral;
+}
+
+footer {
+  grid-area: footer;
+  padding: 2rem;
+  background-color: #7FAC71;
+}
+
+/* COMPONENTS */
+
+nav {
+  background-color: #79CAF9;
+  height: 50px;
+}
+
+/* MEDIA */
+
+@media (max-width: 992px) {
+  .container1 {
+    grid-template-areas:
+      "header"
+      "main"
+      "side1"
+      "side2"
+      "footer";
+
+    grid-template-columns: 1fr;
+    grid-template-rows:
+      auto
+      /* Header */
+      minmax(75px, auto)
+      /* Nav */
+      1fr
+      /* Content */
+      minmax(75px, auto)
+      /* Sidebar */
+      hidden;
+    /* Footer */
+  }
 }
