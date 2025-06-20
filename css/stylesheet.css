@@ -1,16 +1,29 @@
 /* MAIN */
 
+@font-face {
+  font-family: "FinalFantasy";
+  src: url("../font/Final-Fantasy.woff");
+  font-weight: normal;
+  font-style: normal;
+}
 
-html {
+:root {
   scroll-behavior: smooth;
   scroll-margin: 60px;
   font-size: 1.2rem;
   height: 200vh;
+  background-color: black;
+  font-family: "FinalFantasy", sans-serif;
 }
 
 body {
   margin: 0;
   padding: 0;
+  background-color: black;
+}
+
+#loginresult{
+  background-color: black;
 }
 
 /* GRID TEMPLATE */
@@ -39,31 +52,38 @@ main {
   grid-area: main;
   padding: 2rem;
   flex-direction: column;
-  background-color: gainsboro;
+  /* background-color: gainsboro; */
+  background-color: black;
+
 }
 
 .side1 {
   grid-area: side1;
   padding: 2rem;
-  background-color: lightgreen;
+  /* background-color: lightgreen; */
+  background-color: black;
 }
 
 .side2 {
   grid-area: side2;
   padding: 2rem;
-  background-color: lightcoral;
+  /* background-color: lightcoral; */
+  background-color: black;
 }
 
 footer {
   grid-area: footer;
   padding: 2rem;
-  background-color: #7FAC71;
+  /* background-color: #7FAC71; */
+  background-color: black;
+
 }
 
 /* COMPONENTS */
 
 nav {
-  background-color: #79CAF9;
+  /* background-color: #79CAF9; */
+  background-color: black;
   height: 50px;
 }
 

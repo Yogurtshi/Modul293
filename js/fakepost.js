@@ -14,7 +14,6 @@ document.getElementById("loginForm").addEventListener("submit", function (e) {
       <img src="${classValue}" alt="">
     `;
 
-  // Close the modal
   const loginModal = bootstrap.Modal.getInstance(document.getElementById('loginModal'));
   loginModal.hide();
 
