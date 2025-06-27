@@ -8,7 +8,8 @@ document.getElementById("loginForm").addEventListener("submit", function (e) {
 
   const resultDiv = document.getElementById("loginResult");
   resultDiv.innerHTML = `
-      <h5>Your Hero</h5>
+      <h4>Your Hero</h4>
+      <br>
       <p><strong>Username:</strong> ${username}</p>
       <p><strong>Title:</strong> ${title}</p>
       <img src="${classValue}" alt="">

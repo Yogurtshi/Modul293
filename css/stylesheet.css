@@ -5,7 +5,6 @@
   src: url("../font/Final-Fantasy.woff");
   font-weight: normal;
   font-style: normal;
-
 }
 
 :root {
@@ -14,36 +13,43 @@
   font-size: 1.2rem;
   height: 200vh;
   background-color: black;
-  font-family: "FinalFantasy", sans-serif;
+  font-family: "FinalFantasy", Arial, sans-serif;
+  color: #f8f9fa;
 }
 
 body {
   margin: 0;
   padding: 0;
   background-color: black;
+  color: #f8f9fa;
 }
 
-#loginresult{
+#loginResult {
   background-color: black;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+flex-direction: column;
 }
+
 
 /* GRID TEMPLATE */
 
 .container1 {
   display: grid;
-
   grid-template-areas:
     "header header header"
     "side1 main side2"
     "footer footer footer";
-
-  grid-template-columns: 10rem 1fr 10rem;
+  grid-template-columns: 1fr minmax(300px, 900px) 1fr;
   grid-template-rows: auto 1fr auto;
-  grid-gap: 10px;
+  gap: 10px;
   min-height: 200vh;
   margin: 0;
   margin-top: 3rem;
 }
+
 
 header {
   grid-area: header;
@@ -52,43 +58,68 @@ header {
 main {
   grid-area: main;
   padding: 2rem;
-  flex-direction: column;
-  /* background-color: gainsboro; */
   background-color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
+.side1, .side2, footer {
+  padding: 2rem;
+  background-color: black;
 }
 
 .side1 {
   grid-area: side1;
-  padding: 2rem;
-  /* background-color: lightgreen; */
-  background-color: black;
 }
 
 .side2 {
   grid-area: side2;
-  padding: 2rem;
-  /* background-color: lightcoral; */
-  background-color: black;
 }
 
 footer {
   grid-area: footer;
-  padding: 2rem;
-  /* background-color: #7FAC71; */
-  background-color: black;
-
 }
 
-/* COMPONENTS */
+/* NAVIGATION BAR */
 
 nav {
-  /* background-color: #79CAF9; */
   background-color: black;
   height: 50px;
 }
 
-/* MEDIA */
+/* MODAL */
+
+.modal-content {
+  background-color: #1e1e1e;
+  color: #f8f9fa;
+}
+
+/* BUTTONS */
+
+.btn-black {
+  background-color: black;
+  color: white;
+  border: 1px solid white;
+  border: none;
+}
+
+.btn-black:hover {
+  background-color: #222;
+  color: white;
+}
+
+/* FOCUS STYLES FOR ACCESSIBILITY */
+
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 3px solid #f8f9fa;
+  outline-offset: 2px;
+}
+
+/* MEDIA QUERIES */
 
 @media (max-width: 992px) {
   .container1 {
@@ -98,18 +129,12 @@ nav {
       "side1"
       "side2"
       "footer";
-
     grid-template-columns: 1fr;
     grid-template-rows:
       auto
-      /* Header */
       minmax(75px, auto)
-      /* Nav */
       1fr
-      /* Content */
       minmax(75px, auto)
-      /* Sidebar */
-      hidden;
-    /* Footer */
+      auto;
   }
 }
